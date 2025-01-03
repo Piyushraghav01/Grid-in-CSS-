@@ -1,0 +1,41 @@
+#container {
+  display: grid;
+  width: 80vw;
+  height: 90vh;
+  grid-template-rows: 100px 1fr 30px;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas: "head head" "nav main" "nav foot";
+}
+
+header {
+  grid-area: head;
+  background-color: lightblue;
+}
+
+nav {
+  grid-area: nav;
+  background-color: lightgreen;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, auto));
+  grid-auto-rows: 100px;
+  justify-content: space-evenly;
+  gap: 10px 20px;
+  align-content: center;
+  background-color: lightpink;
+}
+
+.card {
+  padding: 20px;
+  background-color: lightgoldenrodyellow;
+  border: 1px solid yellow;
+  border-radius: 5px;
+}
+
+footer {
+  grid-area: foot;
+  background-color: lightslategray;
+}
